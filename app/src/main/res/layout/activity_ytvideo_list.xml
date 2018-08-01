@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <FrameLayout
+        android:id="@+id/progress_FL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/live_streaming_search_toolbar"
+        android:id="@+id/default_loading_view"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+    </LinearLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/popular_videos_rv"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/live_streaming_search_toolbar"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:scrollbars="vertical" />
+
+
+
+    <TextView
+        android:id="@+id/noDataView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No data"
+        android:textColor="#999999"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</RelativeLayout>

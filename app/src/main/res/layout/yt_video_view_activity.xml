@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/yt_top_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/channel_profile_holder"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:background="#ffffff"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_launcher_background"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/channelProPic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:foreground="?android:attr/selectableItemBackground" />
+
+            <ImageView
+                android:id="@+id/rotateBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toLeftOf="@+id/settings_img_view"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="10dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/settings_img_view"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="10dp"
+                android:src="@drawable/ic_launcher_background" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+    <e.ddev.worldcupvibes.Utils.CustomHorizontalViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/yt_bottom_view_holder">
+
+    </e.ddev.worldcupvibes.Utils.CustomHorizontalViewPager>
+
+
+    <LinearLayout
+        android:id="@+id/yt_bottom_view_holder"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/popular_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+
+</RelativeLayout>
+

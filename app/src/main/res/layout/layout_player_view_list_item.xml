@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="180dp"
+    android:layout_height="130dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="180dp"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/yt_video_image"
+            android:layout_width="180dp"
+            android:layout_height="80dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/yt_video_image"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/txt_video_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/yt_video_image"
+            android:layout_alignRight="@+id/yt_video_image"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#000000"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textColor="#ffffff"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/txt_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/horizontal_line"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:visibility="visible"
+            android:gravity="center"
+            android:maxLines="1"
+            android:background="#000000"
+            android:shadowDx="1"
+            android:shadowDy="0"
+            android:text="Name"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/yt_video_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:shadowColor="#000000"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="#ffffff"
+            android:visibility="gone" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
